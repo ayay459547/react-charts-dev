@@ -1,14 +1,11 @@
-import './App.css'
+import { RouterProvider } from 'react-router-dom';
 
-import Layout from '@/layouts/Layout'
-import Header from '@/layouts/Header'
-import Content from '@/layouts/Content'
+import './App.css'
+import { router } from '@/routes/router'
 
 function App() {
   return (
-    <Layout header={<Header />}>
-      <Content />
-    </Layout>
+    <RouterProvider router={router}></RouterProvider>
   )
 }
 

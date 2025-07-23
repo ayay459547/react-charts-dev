@@ -8,4 +8,3 @@ export default function IBottomNavigation({ children, ...props }: IProps) {
     <BottomNavigation {...props}>{children}</BottomNavigation>
   )
 }
-

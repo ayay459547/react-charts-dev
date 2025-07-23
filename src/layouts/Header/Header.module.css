@@ -1,0 +1,47 @@
+.logo-area,
+.sign-in {
+  display: flex;
+  align-items: center;
+}
+.logo-area {
+  gap: 12px;
+}
+.sign-in {
+  gap: 6px;
+}
+
+.title {
+  font-weight: 700;
+}
+.title a {
+  text-decoration: none;
+  color: #009275;
+  font-size: 1.3rem;
+}
+
+.logo {
+  height: 2em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo.react {
+    animation: logo-spin infinite 20s linear;
+  }
+}

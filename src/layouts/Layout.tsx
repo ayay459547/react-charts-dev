@@ -10,8 +10,8 @@ interface LayoutProps {
 export default function Layout({ header, children }: LayoutProps) {
   return (
     <div className={classes.layout}>
-      <header>{header}</header>
-      <main>{children}</main>
+      <header className={classes.header}>{header}</header>
+      <main className={classes.main}>{children}</main>
     </div>
   );
 }
