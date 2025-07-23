@@ -8,4 +8,3 @@ export default function IButton({ children, ...props }: IProps) {
     <BottomNavigationAction {...props}>{children}</BottomNavigationAction>
   )
 }
-
