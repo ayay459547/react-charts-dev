@@ -6,6 +6,7 @@ import Layout from '@/layouts/Layout'
 import Header from '@/layouts/Header'
 import Navigations from '@/layouts/Navigations'
 import Content from '@/layouts/Content'
+import Footer from '@/layouts/Footer'
 
 import Error from '@/components/Error'
 import CircularProgress from '@/components/CircularProgress'
@@ -31,7 +32,10 @@ export const router = createBrowserRouter([
   {
     path: '/',
     element: (
-      <Layout header={<Header><Navigations /></Header>}>
+      <Layout
+        header={<Header><Navigations /></Header>}
+        footer={<Footer />}
+      >
         <Content />
       </Layout>
     ),
