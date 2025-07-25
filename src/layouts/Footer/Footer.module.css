@@ -1,0 +1,45 @@
+.content {
+  width: 80%;
+  margin: 24px auto;
+  padding: 32px;
+  background-color: #e0f1ff;
+  border: 2px solid #6abcff;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  padding: 12px 0;
+  font-weight: 600;
+}
+
+.label {
+  font-size: 1.2rem;
+  padding: 32px 0;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  padding: 64px;
+}
+
+.icons {
+  display: flex;
+  gap: 24px;
+  font-size: 1.5rem;
+}
+.icon {
+  color: #616161;
+  transition-duration: 0.3s;
+}
+.icon:hover {
+  color: #2e2e2e;
+}
+
+.copyright {
+  font-size: 1.1rem;
+}

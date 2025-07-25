@@ -2,8 +2,8 @@ import type { SyntheticEvent } from 'react'
 import { useState, useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 
-import BottomNavigation from '@/components/BottomNavigation'
-import BottomNavigationAction from '@/components/BottomNavigationAction'
+import BottomNavigation from '@/components/inputs/BottomNavigation'
+import BottomNavigationAction from '@/components/inputs/BottomNavigationAction'
 
 import InsertChart from '@mui/icons-material/InsertChart'
 import GridView from '@mui/icons-material/GridView'

@@ -1,0 +1,39 @@
+.container {
+  text-align: start;
+}
+
+.title {
+  color: #646464;
+  font-size: 1.1rem;
+  padding-bottom: 12px;
+}
+
+.label {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+}
+.percent,
+.ratio {
+  color: #646464;
+  padding-top: 12px;
+}
+
+.percent-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #eee;
+  margin-top: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.percent-highlight {
+  height: 100%;
+  background-color: #3f94b5ff;
+  transition: width 0.3s ease;
+}

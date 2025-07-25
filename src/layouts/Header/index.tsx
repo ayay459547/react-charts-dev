@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import viteLogo from '/vite.svg'
 import reactLogo from '@/assets/react.svg'
-import Button from '@/components/Button'
+import Button from '@/components/inputs/Button'
 
 import classes from './Header.module.css'
 
