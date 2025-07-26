@@ -28,6 +28,7 @@
 @media (max-width: 998px) {
   .text {
     width: 80%;
+    padding: 0 24px;
   }
 }
 
