@@ -1,1 +1,0 @@
-import{j as e}from"./index-DfocCWGi.js";const s="_container_lvadk_1",n={container:s};function o(){return e.jsxs("div",{className:n.container,children:[e.jsx("h1",{children:"Blocks Page"}),e.jsx("p",{children:"Welcome to the Blocks page!"})]})}export{o as default};
