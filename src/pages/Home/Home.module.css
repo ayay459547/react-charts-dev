@@ -23,11 +23,11 @@
 }
 
 .descriptions {
-  padding: 48px;
+  padding: 80px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  gap: 24px;
+  gap: 32px;
 }
 @media (max-width: 998px) {
   .descriptions {
@@ -68,7 +68,7 @@
 
 .dashboard,
 .report {
-  padding: 48px 12px;
+  padding: 48px 32px;
   width: 100%;
   height: fit-content;
 }

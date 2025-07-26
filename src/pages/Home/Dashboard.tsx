@@ -9,7 +9,7 @@ import classes from './Home.module.css'
 export default function Dashboard() {
   return (
     <div className={classes.dashboard}>
-      <Grid container spacing={2}>
+      <Grid container spacing={6}>
         <Grid size={{ sm: 12, md: 7 }}>
           <div className={classes.line}>
             <LineChart
