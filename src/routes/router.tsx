@@ -28,25 +28,28 @@ const lazyWithSuspense = (Component: React.LazyExoticComponent<() => ReactNode>)
   </Suspense>
 )
 
-export const router = createBrowserRouter([
-  {
-    path: '/',
-    element: (
-      <Layout
-        header={<Header><Navigations /></Header>}
-        footer={<Footer />}
-      >
-        <Content />
-      </Layout>
-    ),
-    errorElement: <Error />,
-    children: [
-      { index: true, element: lazyWithSuspense(Home) },
-      { path: 'charts', element: lazyWithSuspense(Charts) },
-      { path: 'blocks', element: lazyWithSuspense(Blocks) },
-      { path: 'blocks/:type', element: <div>blocks</div> },
-      { path: 'pricing', element: lazyWithSuspense(Pricing) },
-      { path: 'sign-in', element: lazyWithSuspense(SignIn) },
-    ]
-  }
-])
+export const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: (
+        <Layout
+          header={<Header><Navigations /></Header>}
+          footer={<Footer />}
+        >
+          <Content />
+        </Layout>
+      ),
+      errorElement: <Error />,
+      children: [
+        { index: true, element: lazyWithSuspense(Home) },
+        { path: 'charts', element: lazyWithSuspense(Charts) },
+        { path: 'blocks', element: lazyWithSuspense(Blocks) },
+        { path: 'blocks/:type', element: <div>blocks</div> },
+        { path: 'pricing', element: lazyWithSuspense(Pricing) },
+        { path: 'sign-in', element: lazyWithSuspense(SignIn) },
+      ]
+    }
+  ],
+  { basename: import.meta.env.VITE_API_SYSTEM_URL || '/' }
+)
