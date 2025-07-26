@@ -1,3 +1,57 @@
 .container {
   text-align: center;
 }
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 40px;
+}
+@media (max-width: 998px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+.text {
+  width: 60%;
+  margin: 0 auto;
+  padding: 0 64px;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+}
+@media (max-width: 998px) {
+  .text {
+    width: 80%;
+  }
+}
+
+.pricing {
+  display: flex;
+  gap: 32px;
+  padding: 120px;
+}
+.pricing-card {
+  flex: 1;
+}
+@media (max-width: 998px) {
+  .pricing {
+    flex-direction: column;
+  }
+}
+
+.design-info {
+  width: 80%;
+  padding: 32px;
+  margin: 0 auto 80px;
+}
+@media (max-width: 998px) {
+  .design-info {
+    width: 90%;
+  }
+}
