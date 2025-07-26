@@ -1,0 +1,29 @@
+.container {
+  text-align: start;
+  display: flex;
+  gap: 24px;
+}
+
+.icon svg {
+  color: #0e3c91;
+}
+
+.details {
+  width: fit-content;
+}
+
+.title {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  padding: 6px 0 12px;
+  color: #0e3c91;
+}
+
+.list {
+  font-size: 1.1rem;
+  color: #626262;
+}
+.item {
+  padding-bottom: 12px;
+}

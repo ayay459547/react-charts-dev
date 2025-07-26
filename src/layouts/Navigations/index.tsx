@@ -24,9 +24,7 @@ export default function Navigations () {
   // 根據當前路由設定對應的 tab index
   useEffect(() => {
     const index = PATHS.findIndex(path => location.pathname.startsWith(path))
-    if (index !== -1) {
-      setValue(index)
-    }
+    setValue(index)
   }, [location.pathname])
 
   return (

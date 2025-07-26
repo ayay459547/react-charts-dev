@@ -1,0 +1,98 @@
+.card {
+  border-radius: 16px;
+  background-color: #f9f9f9;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.highlight {
+  background-color: #e1f7ff;
+  border: 1px solid #6bd5f0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.header-left {
+  flex: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.header-right {
+  flex-shrink: 0;
+  width: fit-content;
+  text-align: right;
+}
+
+.tag {
+  width: fit-content;
+  display: inline-block;
+  padding: 12px;
+  border-radius: 6px;
+  background-color: #c1ecff;
+  color: #005177;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.subtitle {
+  color: #6b6b6b;
+  font-size: 0.9rem;
+}
+
+.description {
+  margin: 32px 0 80px;
+}
+.description p {
+  font-size: 0.9rem;
+  color: #444;
+  margin: 8px 0;
+  text-align: left;
+  line-height: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.priceBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 16px;
+  margin-bottom: 4px;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.unit {
+  font-size: 1rem;
+  color: #666;
+}
+
+.footerNote {
+  font-size: 0.75rem;
+  color: #888;
+  margin-bottom: 16px;
+}
+
+.button {
+  background-color: black !important;
+  color: white !important;
+  text-transform: none !important;
+  font-weight: 600;
+  border-radius: 8px !important;
+}
