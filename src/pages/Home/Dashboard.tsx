@@ -10,7 +10,7 @@ export default function Dashboard() {
   return (
     <div className={classes.dashboard}>
       <Grid container spacing={6}>
-        <Grid size={{ sm: 12, md: 7 }}>
+        <Grid size={{ xs: 12, md: 7 }}>
           <div className={classes.line}>
             <LineChart
               title="Line Chart"
@@ -84,7 +84,7 @@ export default function Dashboard() {
           </div>
         </Grid>
 
-        <Grid size={{ sm: 12, md: 5 }}>
+        <Grid size={{ xs: 12, md: 5 }}>
           <div className={classes.pie}>
             <RadarChart
               title="RadarChart"
@@ -149,7 +149,7 @@ export default function Dashboard() {
           </div>
         </Grid>
 
-        <Grid size={{ sm: 12, md: 4 }}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <div className={classes.pie}>
             <PieChart
               title="PieChart"
@@ -196,7 +196,7 @@ export default function Dashboard() {
           </div>
         </Grid>
 
-        <Grid size={{ sm: 12, md: 8 }}>
+        <Grid size={{ xs: 12, md: 8 }}>
           <div className={classes.pie}>
             <TreeMap
               title="TreeMap"

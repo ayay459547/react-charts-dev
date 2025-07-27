@@ -8,7 +8,7 @@ export default function Report() {
   return (
     <div className={classes.report}>
       <Grid container spacing={2}>
-        <Grid size={{ md: 12, lg: 5 }}>
+        <Grid size={{ xs: 12, lg: 5 }}>
           <div className={classes.progress}>
             <ProgressCard
               title="Storage used"
@@ -30,7 +30,7 @@ export default function Report() {
             />
           </div>
         </Grid>
-        <Grid size={{ md: 12, lg: 7 }}>
+        <Grid size={{ xs: 12, lg: 7 }}>
           <BarChart
             title="Bar Chart"
             XAxisKey="name"

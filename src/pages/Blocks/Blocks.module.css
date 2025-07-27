@@ -45,3 +45,8 @@
   justify-content: space-around;
   gap: 32px;
 }
+@media (max-width: 998px) {
+  .blocks {
+    margin: 16px;
+  }
+}

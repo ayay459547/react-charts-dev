@@ -43,6 +43,7 @@
 @media (max-width: 998px) {
   .pricing {
     flex-direction: column;
+    padding: 32px;
   }
 }
 

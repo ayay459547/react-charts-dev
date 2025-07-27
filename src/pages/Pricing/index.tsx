@@ -32,7 +32,7 @@ export default function Pricing() {
           <PricingCard
             title="Yearly"
             subtitle="billed yearly ($159)"
-            tag="Most popular"
+            tag="Popular"
             descriptions={[
               'Our <b>most popular</b> plan previously sold for $299 and is now only <b>$13.25/month</b>.',
               'This plan <b>saves you over 60%</b> in comparison to the monthly plan.',
