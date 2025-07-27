@@ -15,7 +15,7 @@ export default function Blocks() {
   return (
    <div className={classes.container}>
       <h1 className={classes.title}>
-        25+
+        12+
         <span className={classes.premium}>Premium</span>
         UI Blocks
       </h1>

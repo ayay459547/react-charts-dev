@@ -23,6 +23,11 @@
   padding: 64px 80px;
   gap: 32px;
 }
+@media (max-width: 998px) {
+  .login {
+    padding: 64px 32px;
+  }
+}
 
 .footer {
   padding: 40px;

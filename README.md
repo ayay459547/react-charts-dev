@@ -1,5 +1,8 @@
 # React + TypeScript + Vite
 
+## Demo
+https://ayay459547.github.io/react-charts-dev/
+
 ### 練習圖表製作
 
 ### 安裝套件
