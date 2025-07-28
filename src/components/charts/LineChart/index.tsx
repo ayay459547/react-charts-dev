@@ -1,15 +1,22 @@
-// import { useEffect, useRef } from 'react'
+import type { ReactNode } from 'react'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
 
 import Card from '@/components/surfaces/Card'
 // import CardContent from '@/components/surfaces/CardContent'
 import useResizeObserver from '@/hooks/useResizeObserver'
 
+type CartesianLayout = 'horizontal' | 'vertical';
+type AxisDomainType = 'number' | 'category';
 interface LineChartProps {
+  children?: ReactNode,
   title?: string,
   data: any[],
+  layout?: CartesianLayout,
   strokeDasharray?: string,
-  XAxisKey: string,
+  XAxisKey?: string,
+  XAxisType?: AxisDomainType,
+  YAxisKey?: string,
+  YAxisType?: AxisDomainType,
   LineList: {
     key: string,
     [key: string]: any
@@ -25,10 +32,15 @@ interface LineChartProps {
 }
 
 export default function ILineChart({
+  children,
   title,
   data = [],
+  layout,
   strokeDasharray = '5 5',
-  XAxisKey = 'name',
+  XAxisKey,
+  XAxisType,
+  YAxisKey,
+  YAxisType,
   LineList = [],
   margin = {},
   width,
@@ -49,6 +61,7 @@ export default function ILineChart({
             width={width ?? size.width}
             height={height ?? size.height}
             data={data}
+            layout={layout}
             margin={{
               top: 20,
               right: 60,
@@ -58,8 +71,8 @@ export default function ILineChart({
             }}
           >
             <CartesianGrid strokeDasharray={strokeDasharray} />
-            <XAxis dataKey={XAxisKey} />
-            <YAxis />
+            <XAxis dataKey={XAxisKey} type={XAxisType} />
+            <YAxis dataKey={YAxisKey} type={YAxisType} />
             <Tooltip />
             <Legend />
             {LineList.map(line => {
@@ -67,6 +80,7 @@ export default function ILineChart({
                 <Line {...line} key={line.key} />
               )
             })}
+            {children}
           </LineChart>
         </ResponsiveContainer>
       </div>
