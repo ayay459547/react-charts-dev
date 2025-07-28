@@ -1,1 +1,0 @@
-import{j as e}from"./index-5LMIKr_q.js";const s="_container_lvadk_1",t={container:s};function a(){return e.jsxs("div",{className:t.container,children:[e.jsx("h1",{children:"Charts Page"}),e.jsx("p",{children:"Welcome to the Charts page!"})]})}export{a as default};
