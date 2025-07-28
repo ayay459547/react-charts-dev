@@ -1,20 +1,25 @@
 import type { ReactNode } from 'react'
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
+// import type { TooltipProps } from 'recharts'
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
 
 import Card from '@/components/surfaces/Card'
 // import CardContent from '@/components/surfaces/CardContent'
 import useResizeObserver from '@/hooks/useResizeObserver'
 
-type CartesianLayout = 'horizontal' | 'vertical';
-interface LineChartProps {
-  children?: ReactNode,
+type StackOffsetType = 'sign' | 'expand' | 'none' | 'wiggle' | 'silhouette' | 'positive';
+
+interface AreaChartProps {
+  children?: ReactNode
   title?: string,
   data: any[],
-  layout?: CartesianLayout,
   strokeDasharray?: string,
   XAxisKey: string,
-  BarList: {
+  stackOffset?: StackOffsetType,
+  tickFormatter?: ((value: any, index: number) => string),
+  tooltipContent?: any,
+  AreaList: {
     key: string,
+    dataKey: string,
     [key: string]: any
   }[],
   margin?: {
@@ -27,18 +32,20 @@ interface LineChartProps {
   height?: number
 }
 
-export default function ILineChart({
+export default function IAreaChart({
   children,
   title,
   data = [],
-  layout,
   strokeDasharray = '5 5',
   XAxisKey = 'name',
-  BarList = [],
+  stackOffset,
+  tickFormatter,
+  tooltipContent,
+  AreaList = [],
   margin = {},
   width,
   height
-}: LineChartProps) {
+}: AreaChartProps) {
   const { ref, size } = useResizeObserver<HTMLDivElement>()
   // console.log({...size})
   const titleHeight = '40px'
@@ -50,11 +57,11 @@ export default function ILineChart({
       </div>
       <div ref={ref} style={{ height: `calc(100% - ${titleHeight})` }}>
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart
+          <AreaChart
             width={width ?? size.width}
             height={height ?? size.height}
             data={data}
-            layout={layout}
+            stackOffset={stackOffset}
             margin={{
               top: 20,
               right: 60,
@@ -65,16 +72,16 @@ export default function ILineChart({
           >
             <CartesianGrid strokeDasharray={strokeDasharray} />
             <XAxis dataKey={XAxisKey} />
-            <YAxis />
-            <Tooltip />
+            <YAxis tickFormatter={tickFormatter}/>
+            <Tooltip content={tooltipContent} />
             <Legend />
-            {BarList.map(line => {
+            {AreaList.map(area => {
               return (
-                <Bar {...line} key={line.key} />
+                <Area {...area} key={area.key} />
               )
             })}
             {children}
-          </BarChart>
+          </AreaChart>
         </ResponsiveContainer>
       </div>
     </Card>
